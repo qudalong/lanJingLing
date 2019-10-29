@@ -1,0 +1,31 @@
+.indexBg{
+  height: 170rpx;
+  width: 100%;
+}
+
+.row{
+  margin: 10rpx 2% 0;
+  box-sizing: border-box;
+}
+.abs{
+  font-size: 44rpx;
+  box-sizing: border-box;
+  width: 100%;
+  color: #fff;
+  padding: 0 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.yellow{
+  color: yellow;
+  flex: 1;
+  text-align: center;
+}
+.flx1{
+  flex: 3;
+  text-align: center;
+}

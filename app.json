@@ -1,13 +1,41 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/counter/counter",
+    "pages/login/login",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/lackJiqi/lackJiqi"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#4493FF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/homeA.png",
+        "selectedIconPath": "image/homeA.png"
+      },
+      {
+        "pagePath": "pages/counter/counter",
+        "text": "开柜补货",
+        "iconPath": "image/house.png",
+        "selectedIconPath": "image/houseA.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/myA.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

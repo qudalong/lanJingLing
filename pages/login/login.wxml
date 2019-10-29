@@ -1,0 +1,6 @@
+<view class='login'>
+  <image class="logo" src="/image/logo.png"></image>
+  <input class="inp" placeholder="请输入手机号"></input>
+  <input class="inp" placeholder="请输入密码"></input>
+  <view class="btn hover">登录</view>
+</view>
