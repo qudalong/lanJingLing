@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    array: ['区域经销商', '项城区域经销商', '北京区域经销商', '郑东新区区域经销商']
   },
 
   /**
@@ -13,6 +13,12 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  bindPickerChange: function (e) {
+    this.setData({
+      index: e.detail.value
+    })
   },
 
   /**

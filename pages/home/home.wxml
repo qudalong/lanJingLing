@@ -1,3 +1,14 @@
+<view class="flex picker-wrap">
+  <view>经销商列表</view>
+  <picker bindchange="bindPickerChange" class="inp" value="{{index}}" range="{{array}}">
+    <input wx:if="{{!array[index]}}" class="inp" type="text" disabled placeholder="请选择经销商"></input>
+    <view wx:if="{{array[index]}}" class="picker inp">
+      {{array[index]}}
+    </view>
+
+    <image class="down" src="/image/jiantou@2x.png"></image>
+  </picker>
+</view>
 <view class="row relative">
   <image class="indexBg" src="/image/index1.png"></image>
   <view class="abs">

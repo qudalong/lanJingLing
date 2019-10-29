@@ -1,5 +1,5 @@
 .indexBg{
-  height: 170rpx;
+  height: 180rpx;
   width: 100%;
 }
 
@@ -28,4 +28,22 @@
 .flx1{
   flex: 3;
   text-align: center;
+}
+.picker-wrap{
+  padding:10rpx 30rpx;
+  background: #f0f0f0;
+}
+.picker-wrap .inp{
+  flex: 1;
+  position: relative;
+  padding: 10rpx 0;
+  background: #fff;
+  margin-left: 30rpx;
+  padding-right:30rpx; 
+}
+.down{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20rpx;
 }
