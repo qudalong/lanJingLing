@@ -1,0 +1,11 @@
+@import '../lackJiqi/lackJiqi';
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10rpx;
+  background: #4493ff;
+  color: #fff;
+  display: inline-block;
+  transform: translateX(-50%);
+  margin: 30rpx 0 30rpx 50%;
+}

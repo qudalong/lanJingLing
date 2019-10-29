@@ -18,23 +18,23 @@
     <view>待补货机器</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view class="row flex hover">
+  <view bindtap="toGuzhang" class="row flex hover">
     <view>故障机器</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view class="row flex hover">
+  <view bindtap="toEditUserInfo" class="row flex hover">
     <view>修改用户信息</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view class="row flex hover">
+  <view bindtap="toupdatePwd" class="row flex hover">
     <view>修改密码</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view class="row flex hover">
+  <view bindtap="toExitLogin" class="row flex hover">
     <view>退出登录</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view class="row flex hover">
+  <view bindtap="ckVersion" class="row flex hover">
     <view>检查版本</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>

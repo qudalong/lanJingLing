@@ -1,9 +1,12 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/my/my",
-    "pages/counter/counter",
     "pages/login/login",
+    "pages/my/my",
+    "pages/updatePwd/updatePwd",
+    "pages/editUser/editUser",
+    "pages/guzhang/guzhang",
+    "pages/counter/counter",
     "pages/index/index",
     "pages/lackJiqi/lackJiqi"
   ],
