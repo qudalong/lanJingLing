@@ -1,16 +1,7 @@
 @import '../login/login';
 
-.label {
-  width: 20%;
-  margin-bottom: 30rpx;
-  color: #fff;
-}
-
-.login .inp {
-  width: 80%;
-}
 .btn{
   margin: 0;
   padding: 0;
-  border: none;
+  background: none !important;
 }

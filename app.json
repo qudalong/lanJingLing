@@ -3,12 +3,12 @@
     "pages/login/login",
     "pages/home/home",
     "pages/my/my",
-    "pages/updatePwd/updatePwd",
-    "pages/editUser/editUser",
     "pages/guzhang/guzhang",
+    "pages/lackJiqi/lackJiqi",
+    "pages/editUser/editUser",
+    "pages/updatePwd/updatePwd",
     "pages/counter/counter",
-    "pages/index/index",
-    "pages/lackJiqi/lackJiqi"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

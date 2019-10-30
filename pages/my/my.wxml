@@ -2,14 +2,12 @@
   <image class="card " src="/image/card.png"></image>
   <view class="flex abs">
     <view>
-      <view>刘颖</view>
-      <view>18768871893</view>
-      <view>管理员</view>
+      <view>项城兰轩酒店经销商</view>
+      <view style="font-size:12px">18768871893</view>
     </view>
     <view>
-      <view style="color:red">6274.97</view>
-      <view>总销售额</view>
-      <view>（元）</view>
+      <view style="color:#FDE278;">6274.97</view>
+      <view style="font-size:12px">总销售额(元)</view>
     </view>
   </view>
 </view>

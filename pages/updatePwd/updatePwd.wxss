@@ -1,10 +1,2 @@
 @import '../editUser/editUser';
-.label {
-  width: 40%;
-  text-align: right;
- 
-}
 
-.login .inp {
-  width: 60%;
-}

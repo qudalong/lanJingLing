@@ -1,14 +1,11 @@
 <view class='login'>
   <view class="flex">
-    <view class="label">账号：</view>
-    <input class="inp" placeholder="请输入手机号" value="18768871893"></input>
+    <input class="inp" placeholder="请输入手机号" placeholder-class="placeholder" value=""></input>
   </view>
   <view class="flex">
-    <view class="label">密码：</view>
-    <input class="inp" placeholder="请输入密码" value="刘颖"></input>
+    <input class="inp" type="password" placeholder="请输入密码" placeholder-class="placeholder"  value=""></input>
   </view>
   <view class="flex">
-    <view class="label"></view>
     <view class="inp btn hover">设置</view>
   </view>
 </view>

@@ -4,3 +4,4 @@
   <input type="password" class="inp" bindinput="bindPassworld" value="123456" placeholder="请输入密码"></input>
   <view bindtap="login" class="btn hover">登录</view>
 </view>
+<view class="set">服务器设置</view>

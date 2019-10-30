@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 .abs{
-  font-size: 44rpx;
+  font-size: 40rpx;
   box-sizing: border-box;
   width: 100%;
   color: #fff;
@@ -21,17 +21,19 @@
   justify-content: space-between;
 }
 .yellow{
-  color: yellow;
+  color: fff;
   flex: 1;
-  text-align: center;
+  text-align: right;
 }
 .flx1{
   flex: 3;
-  text-align: center;
 }
 .picker-wrap{
   padding:10rpx 30rpx;
-  background: #f0f0f0;
+  font-size: 14px;
+  border-radius: 10rpx;
+  margin: 30rpx;
+  background: #fff;
 }
 .picker-wrap .inp{
   flex: 1;

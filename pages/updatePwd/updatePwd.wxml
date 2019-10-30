@@ -1,18 +1,14 @@
 <view class='login'>
   <view class="flex">
-    <view class="label">原密码：</view>
-    <input class="inp" placeholder="请输入手机号" value="18768871893"></input>
+    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请输入原密码" value=""></input>
   </view>
   <view class="flex">
-    <view class="label">新密码：</view>
-    <input class="inp" placeholder="请输入密码" value="刘颖"></input>
+    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请输入新密码" value=""></input>
   </view>
   <view class="flex">
-    <view class="label">重复新密码：</view>
-    <input class="inp" placeholder="请输入密码" value="刘颖"></input>
+    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请再次输入新密码" value=""></input>
   </view>
   <view class="flex">
-    <view class="label"></view>
     <view class="inp btn hover">设置</view>
   </view>
 </view>

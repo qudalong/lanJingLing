@@ -3,7 +3,7 @@
 .btn {
   padding: 10px 14px;
   border-radius: 10rpx;
-  background: #4493ff;
+  background: #3589C9;
   color: #fff;
   display: inline-block;
   transform: translateX(-50%);
