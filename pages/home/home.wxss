@@ -34,6 +34,7 @@
   border-radius: 10rpx;
   margin: 30rpx;
   background: #fff;
+  box-shadow: 1px 1px 3px #ccc;
 }
 .picker-wrap .inp{
   flex: 1;
