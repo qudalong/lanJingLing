@@ -23,7 +23,7 @@
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "image/homeA.png",
+        "iconPath": "image/home.png",
         "selectedIconPath": "image/homeA.png"
       },
       {

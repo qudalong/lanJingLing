@@ -3,6 +3,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 500rpx;
-  height: 500rpx;
+  width: 400rpx;
+  height: 400rpx;
 }

@@ -1,12 +1,12 @@
 <view class="flex picker-wrap">
   <view>经销商列表</view>
   <picker bindchange="bindPickerChange" class="inp" value="{{index}}" range="{{array}}">
-    <view wx:if="{{!array[index]}}" class="picker inp">请选择经销商</view>
+    <view wx:if="{{!array[index]}}" class="picker inp" style="color:#666">请选择经销商</view>
     <view wx:if="{{array[index]}}" class="picker inp">{{array[index]}}</view>
     <image class="down" src="/image/jiantou@2x.png"></image>
   </picker>
 </view>
-<view class="row relative"style="padding-top:5px">
+<view class="row relative"style="padding-top:10px">
   <image class="indexBg" src="/image/index1.png"></image>
   <view class="abs">
     <view class="flx1">本月销售额(元)</view>
