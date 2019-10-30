@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.1",
-	"appid": "wx903d5cf2be3427cf",
+	"appid": "wxaf454b9d21c79b2b",
 	"projectname": "lanJingLing",
 	"debugOptions": {
 		"hidedInDevtools": []

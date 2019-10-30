@@ -3,8 +3,7 @@
 .cell-group{
   margin:10rpx 0 0 4%;
   width: 92%;
-  border: 1rpx solid #f0f0f0;
-  box-shadow: 1px 2px 3px #ccc;
+  box-shadow: 1px 1px 5px #ccc,-1px -1px 3px #ccc;
   border-radius: 6rpx;
 }
 .row{

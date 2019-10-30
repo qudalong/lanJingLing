@@ -1,2 +1,1 @@
-<!--pages/counter/counter.wxml-->
-<text>pages/counter/counter.wxml</text>
+<image class="code" src="/image/code.png"></image>
