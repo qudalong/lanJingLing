@@ -6,7 +6,7 @@ page{
   margin:10rpx 0 0 4%;
   width: 92%;
   box-shadow: 1px 1px 5px #ccc,-1px -1px 3px #ccc;
-  border-radius: 6rpx;
+  border-radius: 10rpx;
   background: #fff;
 }
 .row{

@@ -1,1 +1,2 @@
-<image class="code" src="/image/code.png"></image>
+<image bindtap="scanCode" class="code" src="/image/code.png"></image>
+<view class='tip'>请点击上方开始扫描</view>
