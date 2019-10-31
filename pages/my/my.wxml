@@ -2,8 +2,8 @@
   <image class="card " src="/image/card.png"></image>
   <view class="flex abs">
     <view>
-      <view>项城兰轩酒店经销商</view>
-      <view style="font-size:12px">18768871893</view>
+      <view>{{userInfo.user_name}}</view>
+      <view style="font-size:12px">{{userInfo.tel}}</view>
     </view>
     <view>
       <view style="color:#FDE278;">6274.97</view>

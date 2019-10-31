@@ -1,16 +1,20 @@
 var app = getApp();
-var host = 'https://parking.ciccv.cn/';
+var host = 'http://39.98.71.65/app/';
 
-function request({url,data={},method='POST'}){
-     return new Promise(function(resolve,reject){
-       _request(url, resolve, reject, data, method)
-     })
+function request({
+  url,
+  data = {},
+  method = 'POST'
+}) {
+  return new Promise(function(resolve, reject) {
+    _request(url, resolve, reject, data, method)
+  })
 }
 
 function _request(url, resolve, reject, data = {}, method = 'POST') {
   wx.request({
-    // url: host + url,
-    url: url,
+    url: host + url,
+    // url: url,
     header: {
       "content-type": "application/json"
     },
