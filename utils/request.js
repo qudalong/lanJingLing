@@ -4,14 +4,14 @@ var host = 'http://39.98.71.65/app/';
 function request({
   url,
   data = {},
-  method = 'POST'
+  method = 'GET'
 }) {
   return new Promise(function(resolve, reject) {
     _request(url, resolve, reject, data, method)
   })
 }
 
-function _request(url, resolve, reject, data = {}, method = 'POST') {
+function _request(url, resolve, reject, data = {}, method = 'GET') {
   wx.request({
     url: host + url,
     // url: url,

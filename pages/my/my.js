@@ -1,22 +1,38 @@
-// pages/my/my.js
+import {
+  request
+} from '../../utils/request.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    myData:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var userInfo = wx.getStorageSync('userInfo');
-    this.setData({
-      userInfo
-    })
+    var username = wx.getStorageSync('userInfo').tel;
+    this.loadOwnData(username);
   },
+  loadOwnData(username) {
+    request({
+      url: 'loadOwnData',
+      data: {
+        username: username
+      }
+    }).then(res => {
+      console.log(res)
+      if (res.statusCode == 200) {
+        this.setData({
+          myData: res.data
+        })
+      }
+    });
+  },
+
   ckVersion() {
     // 用户版本更新
     if (wx.canIUse("getUpdateManager")) {

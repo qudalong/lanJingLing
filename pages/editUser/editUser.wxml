@@ -1,11 +1,11 @@
 <view class='login'>
   <view class="flex">
-    <input class="inp" placeholder="请输入手机号" placeholder-class="placeholder" value=""></input>
+    <input class="inp" type="text" placeholder="请输入手机号" value="{{phone}}" bindinput="bindTel" placeholder-class="placeholder" ></input>
   </view>
   <view class="flex">
-    <input class="inp" type="password" placeholder="请输入密码" placeholder-class="placeholder"  value=""></input>
+    <input class="inp" type="text" value="{{username}}" placeholder="请输入姓名" bindinput="bindUsername" placeholder-class="placeholder" ></input>
   </view>
   <view class="flex">
-    <view class="inp btn hover">设置</view>
+    <view bindtap="editUserInfo" class="inp btn hover">设置</view>
   </view>
 </view>

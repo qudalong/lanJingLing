@@ -7,25 +7,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['区域经销商', '项城区域经销商', '北京区域经销商', '郑东新区区域经销商']
+    mainData: '',
+    array: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var username = wx.getStorageSync('userInfo').tel;
+    this.loadMainData(username);
   },
 
   // 选择经销商
-  getDealer() {
+  loadMainData(username) {
     request({
-      url: 'http://www.icprj.com/IC/api/faPublic/list',
+      url: 'loadMainData',
       data: {
-        type: 1
+        username: username
       }
     }).then(res => {
-
+      console.log(res)
+      if (res.statusCode == 200) {
+        for (var i in res.data.next_level_user) {
+          this.data.array.push(res.data.next_level_user[i].user);
+        }
+        this.setData({
+          mainData: res.data,
+          array: this.data.array
+        })
+      }
     });
   },
 

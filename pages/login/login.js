@@ -53,22 +53,22 @@ Page({
     })
     request({
       url: 'login',
-      method:'GET',
       data: {
         username: tel,
         password: passworld
       }
     }).then(res => {
       wx.hideLoading();
-      var data = res.data;
-      if (data.success == 'true') {
-        wx.setStorageSync('userInfo', data.data)
+      var result = res.data;
+      if (result.success == 'true') {
+        wx.setStorageSync('userInfo', result.data)
+        wx.setStorageSync('initPwd', passworld);
         wx.switchTab({
           url: '/pages/home/home'
         });
       } else {
         wx.showToast({
-          title: data.msg,
+          title: result.msg,
           icon: 'none'
         });
       }
@@ -79,7 +79,7 @@ Page({
   bindTel(e) {
     this.setData({
       tel: e.detail.value
-    })
+    });
   },
   bindPassworld(e) {
     this.setData({

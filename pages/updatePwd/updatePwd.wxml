@@ -1,14 +1,14 @@
 <view class='login'>
   <view class="flex">
-    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请输入原密码" value=""></input>
+    <input class="inp" placeholder-class="placeholder" bindinput="bindpwd" type="password" placeholder="请输入原密码" value=""></input>
   </view>
   <view class="flex">
-    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请输入新密码" value=""></input>
+    <input class="inp" placeholder-class="placeholder" bindinput="bindnewPwd" type="password" placeholder="请输入新密码" value=""></input>
   </view>
   <view class="flex">
-    <input class="inp" placeholder-class="placeholder" type="password" placeholder="请再次输入新密码" value=""></input>
+    <input class="inp" placeholder-class="placeholder" bindinput="bindrenewPwd" type="password" placeholder="请再次输入新密码" value=""></input>
   </view>
   <view class="flex">
-    <view class="inp btn hover">设置</view>
+    <view bindtap="editUserPwd" class="inp btn hover">设置</view>
   </view>
 </view>
