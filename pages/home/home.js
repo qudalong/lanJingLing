@@ -27,7 +27,6 @@ Page({
         username: username
       }
     }).then(res => {
-      console.log(res)
       if (res.statusCode == 200) {
         for (var i in res.data.next_level_user) {
           this.data.array.push(res.data.next_level_user[i].user);
@@ -44,7 +43,10 @@ Page({
   bindPickerChange: function(e) {
     this.setData({
       index: e.detail.value
-    })
+    });
+    let target = this.data.array[this.data.index];
+    let username = target.split('_')[1];
+    this.loadMainData(username);
   },
 
   /**

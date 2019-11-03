@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tel: '13673376888',
+    tel: '15981832697',
     passworld: '111111'
   },
 
@@ -15,7 +15,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
   },
   // 登录
   login() {

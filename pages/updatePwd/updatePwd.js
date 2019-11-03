@@ -68,10 +68,15 @@ Page({
       });
       return
     }
+    console.log('pwd=' + pwd)
+    console.log('newPwd=' + newPwd)
+    console.log('renewPwd=' + renewPwd)
+    // return
     request({
       url: 'editUserPwd',
       data: {
         tel: pwd,
+        // tel: '13673376888',
         pwd: newPwd,
         pwd_old: renewPwd
       }

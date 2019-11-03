@@ -7,9 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    phone: '',//页面显示密码
-    tel: '',//原始密码
-    newTel:'',//新密码
+    telOld: '',//原始密码
+    newTel: '',
     username: ''
   },
 
@@ -19,24 +18,24 @@ Page({
   onLoad: function(options) {
     var userInfo = wx.getStorageSync('userInfo');
     this.setData({
-      tel: userInfo.tel,//原始密码
-      phone: userInfo.tel,
+      telOld: userInfo.tel,//原始密码
+      newTel: userInfo.tel,//要是不改密码时
       username: userInfo.user_name
     })
   },
   editUserInfo() {
     let {
-      tel,
+      telOld,
       newTel,
       username
     } = this.data;
-    if (!tel.trim()) {
+    if (!telOld.trim()) {
       wx.showToast({
         title: '请输入手机号',
         icon: 'none'
       });
       return
-    } else if (!/^[1][3,4,5,7,8][0-9]{9}$/.test(tel)) {
+    } else if (!/^[1][3,4,5,7,8][0-9]{9}$/.test(telOld)) {
       wx.showToast({
         title: '请输入正确的手机号',
         icon: 'none'
@@ -49,10 +48,13 @@ Page({
       });
       return
     }
+    console.log('tel_old=' + telOld)
+    console.log('newTel=' + newTel)
+    console.log('user_name=' + username)
     request({
       url: 'editUserInfo',
       data: {
-        tel_old: tel,
+        tel_old: telOld,
         tel: newTel,
         user_name: username
       }
@@ -76,7 +78,6 @@ Page({
 
   bindTel(e) {
     this.setData({
-      phone: e.detail.value,
       newTel: e.detail.value
     });
   },

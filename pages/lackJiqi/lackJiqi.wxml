@@ -1,22 +1,18 @@
-<view wx:for="list" wx:key="unique" class='cell-group'>
+<view wx:for="{{notFullList}}" wx:key="unique" class='cell-group'>
   <view class="row flex">
     <view class="label">设备编号：</view>
-    <view class="con">j393ws982</view>
+    <view class="con">{{item.no||''}}</view>
   </view>
   <view class="row flex">
     <view class="label">设备名称：</view>
-    <view class="con">服务器上传机器</view>
+    <view class="con">{{item.name||''}}</view>
   </view>
   <view class="row flex">
     <view class="label">安装位置：</view>
-    <view class="con">机房</view>
+    <view class="con">{{item.location||''}}</view>
   </view>
   <view class="row flex">
     <view class="label">缺货数量：</view>
-    <view class="con">11</view>
-  </view>
-  <view class="row flex">
-    <view class="label">补货产品：</view>
-    <view class="con">产品供不应求</view>
+    <view class="con">{{item.goodsInfo||''}}</view>
   </view>
 </view>

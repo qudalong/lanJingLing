@@ -1,24 +1,50 @@
-// pages/counter/counter.js
+import {
+  request
+} from '../../utils/request.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username: '',
+    imei: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.setData({
+      username: wx.getStorageSync('userInfo').tel
+    });
 
   },
+  //扫码开柜补货
+  openDoor() {
+    request({
+      url: 'openDoor',
+      data: {
+        username: this.data.username,
+        imei: this.data.imei
+      }
+    }).then(res => {
+      wx.showToast({
+        title: res.data.msg
+      })
+    });
+  },
+  // 扫码
   scanCode() {
     wx.scanCode({
       onlyFromCamera: true,
-      success(res) {
-        console.log(res)
+      success: res => {
+        // console.log(res)
+        this.setData({
+          imei: res.result.split("=")[1]
+        });
+        // 扫码开柜补货
+        this.openDoor();
       }
     })
   },

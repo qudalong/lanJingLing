@@ -1,6 +1,6 @@
 <view class='login'>
   <view class="flex">
-    <input class="inp" type="text" placeholder="请输入手机号" value="{{phone}}" bindinput="bindTel" placeholder-class="placeholder" ></input>
+    <input class="inp" type="text" placeholder="请输入手机号" value="{{telOld}}" bindinput="bindTel" placeholder-class="placeholder" ></input>
   </view>
   <view class="flex">
     <input class="inp" type="text" value="{{username}}" placeholder="请输入姓名" bindinput="bindUsername" placeholder-class="placeholder" ></input>

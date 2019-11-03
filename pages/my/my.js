@@ -14,8 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var username = wx.getStorageSync('userInfo').tel;
-    this.loadOwnData(username);
+   
   },
   loadOwnData(username) {
     request({
@@ -37,9 +36,11 @@ Page({
     // 用户版本更新
     if (wx.canIUse("getUpdateManager")) {
       let updateManager = wx.getUpdateManager();
+      console.log(updateManager)
       updateManager.onCheckForUpdate((res) => {
-        // 请求完新版本信息的回调
-        console.log(res.hasUpdate);
+        wx.showToast({
+          title: '已是最近版本喽~~',
+        })
       })
       updateManager.onUpdateReady(() => {
         wx.showModal({
@@ -102,7 +103,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    var username = wx.getStorageSync('userInfo').tel;
+    this.loadOwnData(username);
   },
 
   /**
