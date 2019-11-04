@@ -39,7 +39,7 @@ Page({
       console.log(updateManager)
       updateManager.onCheckForUpdate((res) => {
         wx.showToast({
-          title: '已是最近版本喽~~',
+          title: '已是最新版本喽~~',
         })
       })
       updateManager.onUpdateReady(() => {
