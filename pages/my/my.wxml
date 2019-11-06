@@ -6,7 +6,7 @@
       <view style="font-size:12px">{{myData.tel}}</view>
     </view>
     <view>
-      <view style="color:#FDE278;">{{myData.money_total}}</view>
+      <view style="color:#FDE278;">{{myData.money_total/100}}</view>
       <view style="font-size:12px">总销售额(元)</view>
     </view>
   </view>

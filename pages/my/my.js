@@ -23,7 +23,7 @@ Page({
         username: username
       }
     }).then(res => {
-      console.log(res)
+      // console.log(res)
       if (res.statusCode == 200) {
         this.setData({
           myData: res.data
@@ -36,7 +36,7 @@ Page({
     // 用户版本更新
     if (wx.canIUse("getUpdateManager")) {
       let updateManager = wx.getUpdateManager();
-      console.log(updateManager)
+      // console.log(updateManager)
       updateManager.onCheckForUpdate((res) => {
         wx.showToast({
           title: '已是最新版本喽~~',
