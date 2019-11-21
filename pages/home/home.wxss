@@ -2,7 +2,16 @@
   height: 180rpx;
   width: 100%;
 }
-
+.sinle{
+  background: #C5ADF7;
+  height: 74px;
+  line-height: 74px;
+  border-radius: 4px;
+  width: 95%;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 1px #f0f0f0;
+}
 .row{
   margin: 10rpx 2% 0;
   box-sizing: border-box;

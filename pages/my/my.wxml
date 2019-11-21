@@ -20,10 +20,10 @@
     <view>故障机器</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view bindtap="toEditUserInfo" class="row flex hover">
+  <!-- <view bindtap="toEditUserInfo" class="row flex hover">
     <view>修改用户信息</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
+  </view> -->
   <view bindtap="toupdatePwd" class="row flex hover">
     <view>修改密码</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
@@ -32,8 +32,8 @@
     <view>退出登录</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view>
-  <view bindtap="ckVersion" class="row flex hover">
+  <!-- <view bindtap="ckVersion" class="row flex hover">
     <view>检查版本</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
+  </view> -->
 </view>

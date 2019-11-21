@@ -1,6 +1,6 @@
 <view class='login'>
   <image class="logo" src="/image/logo.png"></image>
-  <input class="inp" bindinput="bindTel" value="15981832697" placeholder="请输入手机号"></input>
+  <input class="inp" bindinput="bindTel" value="15981832697" maxlength="11" placeholder="请输入手机号"></input>
   <input type="password" class="inp" bindinput="bindPassworld" value="111111" placeholder="请输入密码"></input>
   <view bindtap="login" class="btn hover">登录</view>
 </view>

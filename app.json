@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/login/login",
     "pages/my/my",
     "pages/guzhang/guzhang",
     "pages/lackJiqi/lackJiqi",
     "pages/updatePwd/updatePwd",
-    "pages/home/home",
     "pages/editUser/editUser",
     "pages/counter/counter",
     "pages/index/index"

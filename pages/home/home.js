@@ -8,7 +8,9 @@ Page({
    */
   data: {
     mainData: '',
-    array: []
+    array: [],
+    totalMoney: 0,
+    username:''
   },
 
   /**
@@ -16,9 +18,33 @@ Page({
    */
   onLoad: function(options) {
     var username = wx.getStorageSync('userInfo').tel;
-    this.loadMainData(username);
+    this.setData({
+      username
+    })
+    this.loadMainDataTotalMoney(username);
   },
 
+  // 销售总额
+  loadMainDataTotalMoney(username) {
+    request({
+      url: 'loadMainData',
+      data: {
+        username: username
+      }
+    }).then(res => {
+      if (res.statusCode == 200) {
+        for (var i in res.data.next_level_user) {
+          this.data.array.push(res.data.next_level_user[i].user);
+        }
+        this.setData({
+          mainData: res.data,
+          array: this.data.array,
+          totalMoney: res.data.month_money
+        });
+        wx.stopPullDownRefresh();
+      }
+    });
+  },
   // 选择经销商
   loadMainData(username) {
     request({
@@ -34,7 +60,7 @@ Page({
         this.setData({
           mainData: res.data,
           array: this.data.array
-        })
+        });
       }
     });
   },
@@ -81,7 +107,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    wx.showLoading({
+      title: '刷新中...',
+    });
+    this.loadMainDataTotalMoney(this.data.username);
   },
 
   /**

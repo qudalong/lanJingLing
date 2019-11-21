@@ -28,13 +28,15 @@ Page({
         icon: 'none'
       });
       return
-    } else if (!/^[1][3,4,5,7,8][0-9]{9}$/.test(tel)) {
-      wx.showToast({
-        title: '请输入正确的手机号',
-        icon: 'none'
-      });
-      return
-    } else if (!passworld.trim()) {
+    } 
+    // else if (!/^[1][3,4,5,7,8][0-9]{9}$/.test(tel)) {
+    //   wx.showToast({
+    //     title: '请输入正确的手机号',
+    //     icon: 'none'
+    //   });
+    //   return
+    // } 
+    else if (!passworld.trim()) {
       wx.showToast({
         title: '请输入密码',
         icon: 'none'

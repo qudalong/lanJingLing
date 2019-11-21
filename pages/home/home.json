@@ -3,5 +3,6 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#10A4FE",
   "navigationBarTitleText": "蓝精灵共享销货柜",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
 }

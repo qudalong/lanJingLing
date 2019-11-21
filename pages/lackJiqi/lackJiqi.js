@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    notFullList: []
+    notFullList: [],
+    username:''
   },
 
   /**
@@ -18,6 +19,9 @@ Page({
       title: '加载中...',
     });
     var username = wx.getStorageSync('userInfo').tel;
+    this.setData({
+      username
+    })
     this.loadMachineNotFull(username);
   },
 
@@ -34,6 +38,7 @@ Page({
         this.setData({
           notFullList: res.data.machine_not_full
         });
+        wx.stopPullDownRefresh();
       }
     });
   },
@@ -70,7 +75,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    wx.showLoading({
+      title: '刷新中...',
+    });
+    this.loadMachineNotFull(this.data.username);
   },
 
   /**

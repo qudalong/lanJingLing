@@ -9,6 +9,12 @@
 <view class="row relative">
   <image class="indexBg" src="/image/index1.png"></image>
   <view class="abs">
+    <view class="flx1">销售总额(元)</view>
+    <view class="yellow">{{totalMoney/100}}</view>
+  </view>
+</view>
+<view class="row relative sinle">
+  <view class="abs">
     <view class="flx1">本月销售额(元)</view>
     <view class="yellow">{{mainData.month_money/100}}</view>
   </view>
