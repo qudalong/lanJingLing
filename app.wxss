@@ -20,8 +20,8 @@ page{
   height: 13px;
 }
 .down{
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
 }
 .relative{
   position: relative;

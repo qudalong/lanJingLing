@@ -1,42 +1,59 @@
 <view class="flex picker-wrap">
-  <view>{{mainData.next_level}}</view>
-  <picker bindchange="bindPickerChange" class="inp" value="{{index}}" range="{{array}}">
-    <view wx:if="{{!array[index]}}" class="picker inp" style="color:#666">请选择补货员</view>
-    <view wx:if="{{array[index]}}" class="picker inp">{{array[index]}}</view>
-    <image class="down" src="/image/jiantou@2x.png"></image>
-  </picker>
+	<!-- <view>{{mainData.next_level}}</view> -->
+	<picker bindchange="bindPickerChangeJxs" class="inp" value="{{index_jxs}}" range="{{jxs}}">
+		<view wx:if="{{!jxs[index_jxs]}}" class="picker inp" style="color:#666">请选择经销商</view>
+		<view wx:if="{{jxs[index_jxs]}}" data-id="{{jxs[index_jxs]}}" class="picker inp">{{jxs[index_jxs]}}</view>
+		<image class="down" src="/image/jiantou@2x.png"></image>
+	</picker>
+	<picker  wx:if="{{yys.length}}" bindchange="bindPickerChangeYys"  class="inp" value="{{index_yys}}" range="{{yys}}">
+		<view wx:if="{{!yys[index_yys]}}" class="picker inp" style="color:#666">请选择运营商</view>
+		<view wx:if="{{yys[index_yys]}}" class="picker inp">{{yys[index_yys]}}</view>
+		<image class="down" src="/image/jiantou@2x.png"></image>
+	</picker>
+  <view  wx:if="{{!yys.length}}" bindchange="bindPickerChangeYys" bindtap="changeYys" class="inp" value="{{index_yys}}" range="{{yys}}">
+		<view class="picker inp" style="color:#666">请选择运营商</view>
+		<image class="down" src="/image/jiantou@2x.png"></image>
+	</view>
 </view>
 <view class="row relative">
-  <image class="indexBg" src="/image/index1.png"></image>
-  <view class="abs">
-    <view class="flx1">销售总额(元)</view>
-    <view class="yellow">{{totalMoney/100}}</view>
-  </view>
+	<image class="indexBg" src="/image/index1.png"></image>
+	<view class="abs">
+		<view class="flx1">销售总额(元)</view>
+		<view class="yellow">{{totalMoney/100}}</view>
+	</view>
 </view>
 <view class="row relative sinle">
-  <view class="abs">
-    <view class="flx1">本月销售额(元)</view>
-    <view class="yellow">{{mainData.month_money/100}}</view>
-  </view>
+	<view class="abs">
+		<view class="flx1">本月销售额(元)</view>
+		<view class="yellow">{{mainData.month_money/100}}</view>
+	</view>
 </view>
 <view class="row relative">
-  <image class="indexBg" src="/image/index2.png"></image>
-  <view class="abs">
-    <view class="flx1">总货柜</view>
-    <view class="yellow">{{mainData.machine_total}}</view>
-  </view>
+	<image class="indexBg" src="/image/index2.png"></image>
+	<view class="abs">
+		<view class="flx1">总货柜</view>
+		<view class="yellow">{{mainData.machine_total}}</view>
+	</view>
 </view>
 <view class="row relative">
-  <image class="indexBg" src="/image/index3.png"></image>
-  <view class="abs">
-    <view class="flx1">故障机器</view>
-    <view class="yellow">{{mainData.machine_bad}}</view>
-  </view>
+	<image class="indexBg" src="/image/index3.png"></image>
+	<view class="abs">
+		<view class="flx1">故障机器</view>
+		<view class="yellow">{{mainData.machine_bad}}</view>
+	</view>
 </view>
 <view class="row relative">
-  <image class="indexBg" src="/image/index4.png"></image>
-  <view class="abs">
-    <view class="flx1">待补货柜</view>
-    <view class="yellow">{{mainData.machine_not_full}}</view>
-  </view>
+	<image class="indexBg" src="/image/index4.png"></image>
+	<view class="abs">
+		<view class="flx1">待补货柜</view>
+		<view class="yellow">{{mainData.machine_not_full}}</view>
+	</view>
 </view>
+<!-- 按钮 -->
+<!-- <view class="btn-fiexd">
+	<radio-group class="radio-group" bindchange="radioChange">
+		<radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+			<text>{{item.value}}</text>
+		</radio>
+	</radio-group>
+</view> -->
