@@ -81,6 +81,7 @@ Page({
 					yys: this.data.yys,
 					resulYys: data
 				});
+				this.loadMainData(this.data.yys[0].split('_')[1]);
 			}
 		});
 	},
@@ -134,7 +135,7 @@ Page({
 		let username = target.split('_')[1];
 		let user_id = this.data.resultJxs.find(item => item.user == target).user_id;
 		this.loadYysList(username, user_id); //根据经销商查询运营商列表
-		this.loadMainData(username);
+		
 	},
   changeYys(){
 		if(!this.data.yys.length){

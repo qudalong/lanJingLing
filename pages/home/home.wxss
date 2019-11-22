@@ -44,7 +44,7 @@
 }
 
 .picker-wrap {
-	padding: 10rpx;
+	padding:14rpx 10rpx;
 	font-size: 14px;
 	border-radius: 10rpx;
 	margin: 20rpx 8rpx;
