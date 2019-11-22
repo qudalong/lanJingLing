@@ -50,6 +50,7 @@ Page({
 			}
 		}).then(res => {
 			if (res.statusCode == 200) {
+				this.data.jxs=[];
 				let data = res.data.jxs_user;
 				data.forEach(item => {
 					this.data.jxs.push(item.user)
@@ -73,6 +74,7 @@ Page({
 		}).then(res => {
 			if (res.statusCode == 200) {
 				console.log(res.data);
+				this.data.yys=[];
 				let data = res.data.yys_user;
 				data.forEach(item => {
 					this.data.yys.push(item.user)
@@ -81,7 +83,7 @@ Page({
 					yys: this.data.yys,
 					resulYys: data
 				});
-				this.loadMainData(this.data.yys[0].split('_')[1]);
+				this.loadMainData(this.data.yys[0].split('_')[1]);//切换经销商自动查询第一个运营商
 			}
 		});
 	},
@@ -135,8 +137,8 @@ Page({
 		let username = target.split('_')[1];
 		let user_id = this.data.resultJxs.find(item => item.user == target).user_id;
 		this.loadYysList(username, user_id); //根据经销商查询运营商列表
-		
 	},
+	
   changeYys(){
 		if(!this.data.yys.length){
 			wx.showToast({
