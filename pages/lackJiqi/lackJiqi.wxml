@@ -13,10 +13,10 @@
   </view>
   <view class="row flex">
     <view class="label">缺货数量：</view>
-    <view class="con">{{item.goodsInfo||''}}</view>
+    <view class="con">{{item.goodsNum||''}}</view>
   </view>
   <view class="row flex">
     <view class="label">补货产品：</view>
-    <view class="con">{{item.goodsDetail||''}}</view>
+    <view class="con">{{item.goodsInfo||''}}</view>
   </view>
 </view>

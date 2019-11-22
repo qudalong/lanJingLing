@@ -11,16 +11,16 @@ Page({
 		array: [],
 		totalMoney: 0,
 		username: '',
-		items: [{
-				name: 'all',
-				value: '全选'
-			},
-			{
-				name: 'item',
-				value: '',
-				checked: 'true'
-			}
-		],
+		// items: [{
+		// 		name: 'all',
+		// 		value: '全选'
+		// 	},
+		// 	{
+		// 		name: 'item',
+		// 		value: '',
+		// 		checked: 'true'
+		// 	}
+		// ],
 		// index_jxs:0,
 		index_yys:0,
 		jxs: [],
@@ -144,8 +144,8 @@ Page({
 			});
 			return;
 		}
-
   },
+	
 	bindPickerChangeYys: function(e) {
 		this.setData({
 			index_yys: e.detail.value
@@ -155,9 +155,9 @@ Page({
 		this.loadMainData(username);
 	},
 
-	radioChange: function(e) {
-		console.log('radio发生change事件，携带value值为：', e.detail.value)
-	},
+	// radioChange: function(e) {
+	// 	console.log('radio发生change事件，携带value值为：', e.detail.value)
+	// },
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成

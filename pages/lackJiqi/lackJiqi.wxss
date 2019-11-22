@@ -16,4 +16,5 @@
 }
 .con{
   color: #6D6C6D;
+  flex: 1;
 }
