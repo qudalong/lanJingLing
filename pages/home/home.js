@@ -147,7 +147,6 @@ Page({
 
   },
 	bindPickerChangeYys: function(e) {
-    return;
 		this.setData({
 			index_yys: e.detail.value
 		});

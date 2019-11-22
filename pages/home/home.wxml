@@ -1,5 +1,4 @@
 <view class="flex picker-wrap">
-	<!-- <view>{{mainData.next_level}}</view> -->
 	<picker bindchange="bindPickerChangeJxs" class="inp" value="{{index_jxs}}" range="{{jxs}}">
 		<view wx:if="{{!jxs[index_jxs]}}" class="picker inp" style="color:#666">请选择经销商</view>
 		<view wx:if="{{jxs[index_jxs]}}" data-id="{{jxs[index_jxs]}}" class="picker inp">{{jxs[index_jxs]}}</view>
