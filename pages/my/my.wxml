@@ -2,11 +2,11 @@
   <image class="card " src="/image/card.png"></image>
   <view class="flex abs">
     <view>
-      <view>{{myData.user_name}}({{myData.role_name}})</view>
+      <view style="font-size:18px">{{myData.user_name}}({{myData.role_name}})</view>
       <view style="font-size:12px">{{myData.tel}}</view>
     </view>
     <view>
-      <view style="color:#FDE278;">{{myData.money_total/100}}</view>
+      <view style="color:#FDE278;font-size:18px">{{myData.money_total/100}}</view>
       <view style="font-size:12px">总销售额(元)</view>
     </view>
   </view>
