@@ -17,3 +17,6 @@
   </view>
   <view bindtap="enableMachine" data-imei="{{item.imei}}" class="btn hover">恢复交易</view>
 </view>
+<view class="empty" wx:if="{{!badList.length}}">
+暂无故障机器
+</view>

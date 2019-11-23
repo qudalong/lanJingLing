@@ -18,19 +18,28 @@ Page({
     wx.showLoading({
       title: '加载中...',
     });
-    var username = wx.getStorageSync('userInfo').tel;
-    this.setData({
-      username
-    })
-    this.loadMachineNotFull(username);
+    let usernamechange = options.usernamechange;
+    console.log('usernamechange=' + usernamechange)
+    if (!usernamechange) {
+      console.log('no')
+      this.setData({
+        username: wx.getStorageSync('userInfo').tel
+      });
+    } else {
+      console.log('yes')
+      this.setData({
+        username: usernamechange
+      });
+    }
+    this.loadMachineNotFull();
   },
 
   //待补货柜列表
-  loadMachineNotFull(username) {
+  loadMachineNotFull() {
     request({
       url: 'loadMachineNotFull',
       data: {
-        username: username
+        username: this.data.username
       }
     }).then(res => {
       if (res.statusCode == 200) {
@@ -78,7 +87,7 @@ Page({
     wx.showLoading({
       title: '刷新中...',
     });
-    this.loadMachineNotFull(this.data.username);
+    this.loadMachineNotFull();
   },
 
   /**

@@ -20,3 +20,6 @@
     <view class="con">{{item.goodsInfo||''}}</view>
   </view>
 </view>
+<view class="empty" wx:if="{{!notFullList.length}}">
+暂无待补机器
+</view>

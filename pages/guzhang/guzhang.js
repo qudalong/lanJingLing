@@ -15,9 +15,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({
-      username: wx.getStorageSync('userInfo').tel
-    });
+    let usernamechange = options.usernamechange;
+    console.log('usernamechange=' + usernamechange)
+    if (!usernamechange){
+      console.log('1')
+      this.setData({
+        username: wx.getStorageSync('userInfo').tel
+      });
+    }else{
+      console.log('2')
+      this.setData({
+        username: usernamechange
+      });
+    }
     this.loadMachineBad();
   },
 
