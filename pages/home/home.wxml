@@ -1,19 +1,4 @@
-<!-- <view class="flex picker-wrap">
-	<picker bindchange="bindPickerChangeJxs" class="inp" value="{{index_jxs}}" range="{{jxs}}">
-		<view wx:if="{{!jxs[index_jxs]}}" class="picker inp" style="color:#666;font-size:16px">请选择经销商</view>
-		<view wx:if="{{jxs[index_jxs]}}" data-id="{{jxs[index_jxs]}}" class="picker inp">{{jxs[index_jxs]}}</view>
-		<image class="down" src="/image/jiantou@2x.png"></image>
-	</picker>
-	<picker  wx:if="{{yys.length}}" bindchange="bindPickerChangeYys"  class="inp" value="{{index_yys}}" range="{{yys}}">
-		<view wx:if="{{!yys[index_yys]}}" class="picker inp" style="color:#666;font-size:16px">请选择运营商</view>
-		<view wx:if="{{yys[index_yys]}}" class="picker inp">{{yys[index_yys]}}</view>
-		<image class="down" src="/image/jiantou@2x.png"></image>
-	</picker>
-  <view  wx:if="{{!yys.length}}" bindchange="bindPickerChangeYys" bindtap="changeYys" class="inp" value="{{index_yys}}" range="{{yys}}">
-		<view class="picker inp" style="color:#666;font-size:16px">请选择运营商</view>
-		<image class="down" src="/image/jiantou@2x.png"></image>
-	</view>
-</view> -->
+
 <view class="flex picker-wrap">
 	<view bindtap="bindPickerChangeJxs" class="inp">
 		<view wx:if="{{!value}}" class="picker inp" style="color:#666;font-size:16px">请选择经销商</view>
