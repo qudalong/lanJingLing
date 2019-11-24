@@ -286,6 +286,10 @@ Page({
         });
         this.loadMainDataTotalMoney(this.data.username);
         this.loadJxsList(this.data.username);
+        var username = this.data.username;
+        this.setData({
+          usernamechange: username //页面跳转传值用
+        });
 
       } else if (this.data.falg == 'yys'){
         this.setData({
@@ -297,7 +301,10 @@ Page({
           showPicker: false
         });
         this.loadMainDataTotalMoney(this.data.jxsusername);
-
+        var username = this.data.jxsusername;
+        this.setData({
+          usernamechange: username //页面跳转传值用
+        });
       }
       
     
