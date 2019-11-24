@@ -30,6 +30,7 @@ Page({
     ],
     // index_jxs:0,
     index_yys: 0,
+    yyssel:'',//运营商
     jxs: [],
     yys: [],
     resultJxs: [],
@@ -41,6 +42,13 @@ Page({
    */
   onLoad: function(options) {
     var username = wx.getStorageSync('userInfo').tel;
+    if(!username){
+      wx.redirectTo({
+        url: '/pages/login/login',
+      });
+      return ;
+
+    }
     this.setData({
       username
     })
@@ -50,26 +58,61 @@ Page({
 
   // 自定义picker-view
   bindChange(e) {
+   console.log(e);
     let index_z = e.detail.value[0];
-    this.setData({
-      index_z,
-      value_temp: this.data.jxs[index_z]
-    });
+    if (this.data.falg == 'jxs') {
+      this.setData({
+        index_z,
+        value_temp: this.data.jxs[index_z]
+      });
+
+    }else{
+      this.setData({
+        index_z,
+        value_temp: this.data.yys[index_z]
+      });
+    }
+    
   },
 
   bindSure() {
+    console.log('-------');
+    console.log(this.data.index_z );
     if (this.data.index_z == 0) { //不选择直接点击确定
-      this.setData({
-        showPicker: false,
-        value: this.data.jxs[0]
-      });
+      if (this.data.falg == 'jxs') {
+        this.setData({
+          showPicker: false,
+          value: this.data.jxs[0],
+          value1: this.data.jxs[0]
+        });
+      }else{
+        this.setData({
+          showPicker: false,
+          //value: this.data.jxs[0],
+          value1: this.data.yys[0]
+        });
+
+      }
+      
     } else {
-      this.setData({
-        showPicker: false,
-        value: this.data.value_temp //点击确定输入框才赋值
-      });
+
+      if (this.data.falg == 'jxs') {
+        this.setData({
+          showPicker: false,
+          value: this.data.value_temp, //点击确定输入框才赋值
+          value1: this.data.value_temp //点击确定输入框才赋值
+
+        });
+
+      }else{
+        this.setData({
+          showPicker: false,
+          value1: this.data.value_temp //点击确定输入框才赋值
+        });
+      }
+     
     }
-    let target = this.data.value;
+    let target = this.data.value1;
     let username = target.split('_')[1];
     this.setData({
       usernamechange: username //页面跳转传值用
@@ -78,16 +121,25 @@ Page({
     if (this.data.falg == 'jxs') {
       let user_id = this.data.resultJxs.find(item => item.user == target).user_id;
       this.loadYysList(username, user_id); //根据经销商查询运营商列表
+      this.loadMainData(username);
+      this.setData({
+        yyssel:'',
+        jxsusername: username
+      });
     }
     if (this.data.falg == 'yys') {
       this.loadMainData(username); //根据运营商查询数据
+      this.setData({
+        yyssel: target
+      })
     }
   },
   // 点击经销商
   bindPickerChangeJxs: function(e) {
     this.setData({
       showPicker: true,
-      falg: 'jxs'
+      falg: 'jxs',
+      index_z: 0
     });
     this.setData({
       jxs: this.data.jxs_temp //数据重新变成经销商
@@ -106,6 +158,7 @@ Page({
     this.setData({
       falg: 'yys',
       showPicker: true,
+      index_z: 0,
       jxs: this.data.yys //数据替换
     });
   },
@@ -158,7 +211,7 @@ Page({
           yys: this.data.yys,
           resulYys: data
         });
-        this.loadMainData(this.data.yys[0].split('_')[1]); //切换经销商自动查询第一个运营商
+       // this.loadMainData(this.data.yys[0].split('_')[1]); //切换经销商自动查询第一个运营商
       }
     });
   },
@@ -178,7 +231,7 @@ Page({
         this.setData({
           mainData: res.data,
           array: this.data.array,
-          totalMoney: res.data.month_money
+          totalMoney: res.data.total_money
         });
         wx.stopPullDownRefresh();
       }
@@ -198,6 +251,7 @@ Page({
         }
         this.setData({
           mainData: res.data,
+          totalMoney: res.data.total_money,
           array: this.data.array
         });
       }
@@ -220,13 +274,33 @@ Page({
   radioChange: function(e) {
     let val = e.detail.value;
     if (val == 'all') {
-      this.setData({
-        value: '',
-        yys: [],
-        showPicker: false
-      })
-      this.loadMainDataTotalMoney(this.data.username);
-      this.loadJxsList(this.data.username);
+
+      if (this.data.falg == 'jxs') {
+        this.setData({
+          value: '',
+          value1:'',
+          yys: [],
+          yyssel:'',
+          index_z:0,
+          showPicker: false
+        });
+        this.loadMainDataTotalMoney(this.data.username);
+        this.loadJxsList(this.data.username);
+
+      } else if (this.data.falg == 'yys'){
+        this.setData({
+          //value: '',
+          //value1: '',
+          //yys: [],
+          yyssel: '',
+          index_z: 0,
+          showPicker: false
+        });
+        this.loadMainDataTotalMoney(this.data.jxsusername);
+
+      }
+      
+    
     }
   },
 

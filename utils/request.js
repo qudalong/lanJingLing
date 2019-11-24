@@ -1,5 +1,5 @@
 var app = getApp();
-var host = 'http://39.98.71.65/app/';
+var host = 'https://m.hnzzljl.com/app/';
 
 function request({
   url,

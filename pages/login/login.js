@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tel: '15981832696',
-    passworld: '111111'
+    tel: '',
+    passworld: ''
   },
 
   /**

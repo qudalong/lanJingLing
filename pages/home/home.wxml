@@ -6,8 +6,8 @@
 		<image class="down" src="/image/jiantou@2x.png"></image>
 	</view>
 	<view bindtap="bindPickerChangeYys"  class="inp">
-		<view wx:if="{{!yys[index_yys]}}" class="picker inp" style="color:#666;font-size:16px">请选择运营商</view>
-		<view wx:if="{{yys[index_yys]}}" class="picker inp">{{yys[index_yys]}}</view>
+		<view wx:if="{{!yyssel}}" class="picker inp" style="color:#666;font-size:16px">请选择运营商</view>
+		<view wx:if="{{yyssel}}" class="picker inp">{{yyssel}}</view>
 		<image class="down" src="/image/jiantou@2x.png"></image>
 	</view>
 </view>

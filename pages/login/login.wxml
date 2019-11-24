@@ -1,7 +1,7 @@
 <view class='login'>
   <image class="logo" src="/image/logo.png"></image>
-  <input class="inp" bindinput="bindTel" value="15981832696" maxlength="11" placeholder="请输入手机号"></input>
-  <input type="password" class="inp" bindinput="bindPassworld" value="111111" placeholder="请输入密码"></input>
+  <input class="inp" bindinput="bindTel" value="" minlength="11" maxlength="11" placeholder="请输入账号或者手机号"></input>
+  <input type="password" class="inp" bindinput="bindPassworld" value="" placeholder="请输入密码"></input>
   <view bindtap="login" class="btn hover">登录</view>
 </view>
-<view class="set">服务器设置</view>
+<view class="set" wx:if="{{0}}">服务器设置</view>
