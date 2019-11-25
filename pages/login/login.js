@@ -65,7 +65,12 @@ Page({
         wx.setStorageSync('userInfo', result.data)
         wx.setStorageSync('initPwd', passworld);
         wx.switchTab({
-          url: '/pages/home/home'
+          url: '/pages/home/home',
+          success: function (e) {
+            var page = getCurrentPages().pop();
+            if (page == undefined || page == null) return;
+              page.onLoad();
+          }          
         });
       } else {
         wx.showToast({

@@ -50,7 +50,8 @@ Page({
 
     }
     this.setData({
-      username
+      username,
+      usernamechange:username
     })
     this.loadMainDataTotalMoney(username);
     this.loadJxsList(username);
