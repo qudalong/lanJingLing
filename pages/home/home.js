@@ -42,6 +42,7 @@ Page({
    */
   onLoad: function(options) {
     var username = wx.getStorageSync('userInfo').tel;
+     
     if(!username){
       wx.redirectTo({
         url: '/pages/login/login',
@@ -49,8 +50,11 @@ Page({
       return ;
 
     }
+    var user_type = wx.getStorageSync('userInfo').user_type;
     this.setData({
+      user_type,
       username,
+      loginuser:username,
       usernamechange:username
     })
     this.loadMainDataTotalMoney(username);
@@ -121,8 +125,12 @@ Page({
     // console.log('usernamechange---=' + username)
     if (this.data.falg == 'jxs') {
       let user_id = this.data.resultJxs.find(item => item.user == target).user_id;
-      this.loadYysList(username, user_id); //根据经销商查询运营商列表
-      this.loadMainData(username);
+      let loginname = this.data.loginuser;
+      this.loadYysList(loginname, user_id); //根据经销商查询运营商列表
+      let user_type = this.data.user_type;
+      if (user_type != 3) {
+        this.loadMainData(username);
+      }
       this.setData({
         yyssel:'',
         jxsusername: username
@@ -285,7 +293,11 @@ Page({
           index_z:0,
           showPicker: false
         });
-        this.loadMainDataTotalMoney(this.data.username);
+        let user_type = this.data.user_type;
+        if(user_type != 3){
+          this.loadMainDataTotalMoney(this.data.username);
+        }
+       
         this.loadJxsList(this.data.username);
         var username = this.data.username;
         this.setData({
