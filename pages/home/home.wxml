@@ -1,5 +1,5 @@
 
-<view class="flex picker-wrap">
+<view class="flex picker-wrap" wx:if="{{user_type != 4}}">
 	<view bindtap="bindPickerChangeJxs" class="inp">
 		<view wx:if="{{!value}}" class="picker inp" style="color:#666;font-size:16px">请选择经销商</view>
 		<view wx:if="{{value}}" data-id="{{jxs[index_jxs]}}" class="picker inp">{{value}}</view>

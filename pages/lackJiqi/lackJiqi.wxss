@@ -18,3 +18,16 @@
   color: #6D6C6D;
   flex: 1;
 }
+.row{
+  position: relative;
+}
+.bh-btn{
+padding:20rpx 30rpx;
+border-radius: 10rpx;
+background: #10A4FE;
+color: #fff;
+position: absolute;
+top: 0;
+right: 10rpx;
+font-size: 30rpx;
+}
