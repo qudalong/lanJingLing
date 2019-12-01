@@ -61,8 +61,7 @@ Page({
         wx.showToast({
           title: '恢复成功'
         });
-        // 更新数据
-        this.loadMachineBad(this.data.username);
+        this.loadMachineBad(this.data.username); // 更新数据
       }else{
         wx.showToast({
           title: '恢复失败'
