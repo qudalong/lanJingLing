@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    myData:''
+    myData:'',
+    imei:'',
+		show:true
   },
 
   /**
@@ -16,6 +18,46 @@ Page({
   onLoad: function(options) {
    
   },
+
+	
+  //机器扫描
+  scanMem() {
+    request({
+      url: 'xxx',
+      data: {
+        username: this.data.username,
+        imei: this.data.imei
+      }
+    }).then(res => {
+      wx.showToast({
+        title: res.data.msg
+      })
+    });
+  },
+	
+  // 扫码
+  scanCode() {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: res => {
+        this.setData({
+          imei: res.result.split("=")[1],
+					show:true
+        });
+        //机器扫描
+        // this.scanMem();
+      }
+    })
+  },
+	
+	// 关闭弹窗
+	closeDialog(){
+		this.setData({
+		  show:false
+		});
+	},
+
+
   loadOwnData(username) {
     request({
       url: 'loadOwnData',

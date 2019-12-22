@@ -1,43 +1,60 @@
 <view class="cart-wrap relative">
-  <image class="card " src="/image/card.png"></image>
-  <view class="flex abs">
-    <view>
-      <view style="font-size:18px">{{myData.user_name}}({{myData.role_name}})</view>
-      <view style="font-size:12px">{{myData.tel}}</view>
-    </view>
-    <view>
-      <view style="color:#FDE278;font-size:18px">{{myData.money_total/100}}</view>
-      <view style="font-size:12px">总销售额(元)</view>
-    </view>
-  </view>
+	<image class="card " src="/image/card.png"></image>
+	<view class="flex abs">
+		<view>
+			<view style="font-size:18px">{{myData.user_name}}({{myData.role_name}})</view>
+			<view style="font-size:12px">{{myData.tel}}</view>
+		</view>
+		<view>
+			<view style="color:#FDE278;font-size:18px">{{myData.money_total/100}}</view>
+			<view style="font-size:12px">总销售额(元)</view>
+		</view>
+	</view>
 </view>
 <view class='cell-group'>
-  <view bindtap="toBuhuo" class="row flex hover">
-    <view>待补货机器</view>
-    <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
-  <view bindtap="toGuzhang" class="row flex hover">
-    <view>故障机器</view>
-    <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
-  <!-- <view bindtap="toEditUserInfo" class="row flex hover">
+	<view bindtap="toBuhuo" class="row flex hover">
+		<view>待补货机器</view>
+		<image class="icon_right" src="/image/icon_right.png"></image>
+	</view>
+	<view bindtap="toGuzhang" class="row flex hover">
+		<view>故障机器</view>
+		<image class="icon_right" src="/image/icon_right.png"></image>
+	</view>
+	<!-- <view bindtap="toEditUserInfo" class="row flex hover">
     <view>修改用户信息</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view> -->
-    <view bindtap="scanMem" class="row flex hover">
-    <view>机器扫码</view>
-    <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
-  <view bindtap="toupdatePwd" class="row flex hover">
-    <view>修改密码</view>
-    <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
-  <view bindtap="toExitLogin" class="row flex hover">
-    <view>退出登录</view>
-    <image class="icon_right" src="/image/icon_right.png"></image>
-  </view>
-  <!-- <view bindtap="ckVersion" class="row flex hover">
+	<view bindtap="scanCode" class="row flex hover">
+		<view>机器扫码</view>
+		<image class="icon_right" src="/image/icon_right.png"></image>
+	</view>
+	<view bindtap="toupdatePwd" class="row flex hover">
+		<view>修改密码</view>
+		<image class="icon_right" src="/image/icon_right.png"></image>
+	</view>
+	<view bindtap="toExitLogin" class="row flex hover">
+		<view>退出登录</view>
+		<image class="icon_right" src="/image/icon_right.png"></image>
+	</view>
+	<!-- <view bindtap="ckVersion" class="row flex hover">
     <view>检查版本</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view> -->
+</view>
+<!-- 弹窗 -->
+<view bindtap='closeDialog' wx:if="{{show}}" class="dialog">
+	<view class="box">
+		<view class="item">
+			<view class="lable">机器名称：</view>
+			<view class="con">123456</view>
+		</view>
+		<view class="item">
+			<view class="lable">编号：</view>
+			<view class="con">123456</view>
+		</view>
+		<view class="item">
+			<view class="lable">imei：</view>
+			<view class="con">123456</view>
+		</view>
+	</view>
 </view>
