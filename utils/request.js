@@ -1,5 +1,6 @@
 var app = getApp();
 var host = 'https://m.hnzzljl.com/app/';
+//var host = 'http://localhost:1138/app/';
 
 function request({
   url,

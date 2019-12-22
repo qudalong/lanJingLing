@@ -24,6 +24,10 @@
     <view>修改用户信息</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view> -->
+    <view bindtap="scanMem" class="row flex hover">
+    <view>机器扫码</view>
+    <image class="icon_right" src="/image/icon_right.png"></image>
+  </view>
   <view bindtap="toupdatePwd" class="row flex hover">
     <view>修改密码</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
