@@ -9,29 +9,59 @@ Page({
   data: {
     myData:'',
     imei:'',
-		show:true
+		show:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let userinfo = wx.getStorageSync('userInfo')
+    if(userinfo){
+      let user_type = userinfo.user_type;
+
+      this.setData({
+        user_type:user_type
+      });
+
+    }else{
+      wx.redirectTo({
+        url: '/pages/login/login',
+      });
+      return;
+    }
+    
    
   },
 
 	
   //机器扫描
-  scanMem() {
+  scanMem(imei) {
+    let _this = this;
+    wx.showLoading({
+      title: '正在加载..',
+    });
     request({
-      url: 'xxx',
+      url: 'selMach',
       data: {
         username: this.data.username,
-        imei: this.data.imei
+        imei: imei
       }
     }).then(res => {
-      wx.showToast({
-        title: res.data.msg
-      })
+      wx.hideLoading();
+      if(res.data.id){
+       
+        _this.setData({
+          mechName:res.data.name,
+          mechNo: res.data.no,
+          mechPostTime:res.data.last_post_time,
+          show: true
+        });
+      }else{
+        wx.showToast({
+          title: '二维码无效',
+        });
+      }
     });
   },
 	
@@ -41,11 +71,11 @@ Page({
       onlyFromCamera: true,
       success: res => {
         this.setData({
-          imei: res.result.split("=")[1],
-					show:true
+          imei: res.result.split("=")[1]
+					
         });
         //机器扫描
-        // this.scanMem();
+        this.scanMem(res.result.split("=")[1]);
       }
     })
   },

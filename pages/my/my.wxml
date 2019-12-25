@@ -24,7 +24,7 @@
     <view>修改用户信息</view>
     <image class="icon_right" src="/image/icon_right.png"></image>
   </view> -->
-	<view bindtap="scanCode" class="row flex hover">
+	<view bindtap="scanCode" class="row flex hover"  wx:if="{{user_type ==  1}}">
 		<view>机器扫码</view>
 		<image class="icon_right" src="/image/icon_right.png"></image>
 	</view>
@@ -46,15 +46,19 @@
 	<view class="box">
 		<view class="item">
 			<view class="lable">机器名称：</view>
-			<view class="con">123456</view>
+			<view class="con">{{mechName}}</view>
 		</view>
 		<view class="item">
 			<view class="lable">编号：</view>
-			<view class="con">123456</view>
+			<view class="con">{{mechNo}}</view>
 		</view>
 		<view class="item">
 			<view class="lable">imei：</view>
-			<view class="con">123456</view>
+			<view class="con">{{imei}}</view>
+		</view>
+    	<view class="item">
+			<view class="lable">最后在线时间：</view>
+			<view class="con">{{mechPostTime}}</view>
 		</view>
 	</view>
 </view>

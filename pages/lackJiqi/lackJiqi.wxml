@@ -14,7 +14,7 @@
   <view class="row flex">
     <view class="label">缺货数量：</view>
     <view class="con">{{item.goodsNum||''}}</view>
-    <view class="bh-btn hover">一键补货</view>
+    <view class="bh-btn hover" bindtap="mechbh" data-imei="{{item.imei}}" wx:if="{{user_type == 1}}">一键补货</view>
   </view>
   <view class="row flex">
     <view class="label">补货产品：</view>
