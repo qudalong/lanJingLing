@@ -1,0 +1,23 @@
+<view class='top flex'>
+  <view>窗口</view>
+  <view>商品名称</view>
+  <view>库存量</view>
+  <view>补货</view>
+</view>
+<view class="list">
+  <view wx:for="{{list}}" class="item flex">
+    <view class="ranking">{{index+1}}</view>
+    <view>杜蕾斯安全套</view>
+    <view>2</view>
+    <checkbox></checkbox>
+  </view>
+  <view class="submit">提交</view>
+</view>
+<view class="list">
+  <view  class="item flex">
+    <view class="ranking">7</view>
+    <view>其他商品</view>
+    <view>0</view>
+    <view class="submit2">提交</view>
+  </view>
+</view>
