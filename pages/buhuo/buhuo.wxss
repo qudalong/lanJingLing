@@ -1,51 +1,51 @@
-.flex{
+.flex {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background: #fff;
 }
-.top{
+
+.top {
   padding: 30rpx 0;
   margin-bottom: 20rpx;
 }
-page{
+
+page {
   background: #f0f0f0;
 }
-.list{
+
+.list {
   background: #fff;
-box-shadow: 1px 1px 3px #dedede;
-margin-bottom: 20rpx;
+  box-shadow: 1px 1px 3px #dedede;
+  margin-bottom: 20rpx;
 }
-.list .item{
-  padding: 20rpx 0
+
+.list .item {
+  padding: 20rpx 0;
 }
-.ranking{
+
+.ranking {
   height: 80rpx;
   width: 80rpx;
   border-radius: 50%;
-  background: #7BB5FF;
+  background: #7bb5ff;
   color: blue;
   text-align: center;
   line-height: 80rpx;
 }
-.submit{
-  padding:20rpx 40rpx;
+
+.submit, .submit2 {
+  padding: 20rpx 40rpx;
   border-radius: 10rpx;
   text-align: center;
-  background: #10A4FE;
+  background: #10a4fe;
   color: #fff;
   margin: 30rpx 0;
   display: inline-block;
- position: relative;
- left: 50%;
- transform: translateX(-50%);
 }
-.submit2{
-  padding:20rpx 40rpx;
-  border-radius: 10rpx;
-  text-align: center;
-  background: #10A4FE;
-  color: #fff;
-  margin: 30rpx 0;
-  display: inline-block;
+
+.submit {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
