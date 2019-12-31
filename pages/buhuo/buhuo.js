@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [1, , 1, 1, 1, 1]
+    array: ['美国', '中国', '巴西', '日本'],
+    list: [1, , 1, 1, 1, 1],
+    act: 0
   },
 
   /**
@@ -14,7 +16,11 @@ Page({
   onLoad: function(options) {
 
   },
-
+  bindPickerChange: function (e) {
+    this.setData({
+      act: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
