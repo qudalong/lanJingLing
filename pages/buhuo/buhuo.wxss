@@ -12,6 +12,7 @@
 
 page {
   background: #f0f0f0;
+  font-size: 34rpx;
 }
 
 .list {
