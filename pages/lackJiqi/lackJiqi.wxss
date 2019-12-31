@@ -31,3 +31,6 @@ top: 0;
 right: 10rpx;
 font-size: 30rpx;
 }
+.name{
+  width: 500rpx
+}

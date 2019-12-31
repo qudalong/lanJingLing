@@ -43,5 +43,9 @@ page {
 .relative {
 	position: relative;
 }
-
+.row1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
 /* background:linear-gradient(0deg,rgba(23,128,255,1),rgba(14,176,254,1)); */

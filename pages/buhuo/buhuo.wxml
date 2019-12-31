@@ -6,15 +6,15 @@
 </view>
 <view class="list">
   <view wx:for="{{list}}" class="item flex">
-    <view class="ranking">{{index+1}}</view>
-    <view>杜蕾斯安全套</view>
-    <view>2</view>
-    <checkbox></checkbox>
+    <view class="ranking a">{{index+1}}</view>
+    <view class="row1 name">杜蕾斯安全套杜蕾斯安全杜蕾斯安全套杜蕾斯安全</view>
+    <view class="a">2</view>
+    <checkbox class="a"></checkbox>
   </view>
   <view class="submit">提交</view>
 </view>
 <view class="list">
-  <view  class="item flex">
+  <view class="item flex">
     <view class="ranking">7</view>
     <view>其他商品</view>
     <view>0</view>

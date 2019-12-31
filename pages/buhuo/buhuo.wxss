@@ -50,3 +50,6 @@ page {
   left: 50%;
   transform: translateX(-50%);
 }
+.name{
+  width: 400rpx;
+}
