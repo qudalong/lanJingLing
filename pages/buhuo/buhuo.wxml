@@ -1,6 +1,6 @@
 <view class='top flex'>
   <view>窗口</view>
-  <view>商品名称</view>
+  <view class="row1 name">商品名称</view>
   <view>库存量</view>
   <view>补货</view>
 </view>
