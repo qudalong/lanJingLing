@@ -7,10 +7,9 @@
 <view class="list">
   <view wx:for="{{list}}" class="item flex">
     <view class="ranking a">{{index+1}}</view>
-    <!-- <view class="row1 name">杜蕾斯安全套杜蕾斯安全杜蕾斯安全套杜蕾斯安全</view> -->
-    <picker class="row1 name" bindchange="bindPickerChange" value="{{act}}" range="{{array}}">
+    <picker class="row1 name" data-index="{{index}}"  bindchange="bindPickerChange" value="{{act}}" range="{{array}}">
         <view class="picker">
-         杜蕾斯安全套安全--{{array[act]}}
+         {{item.name}}
         </view>
     </picker>
     <view class="a">2</view>
@@ -28,8 +27,3 @@
 </view>
 
 
-<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      当前选择：{{array[index]}}
-    </view>
-</picker>

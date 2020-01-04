@@ -5,8 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['美国', '中国', '巴西', '日本'],
-    list: [1, , 1, 1, 1, 1],
+    array: ['杜蕾斯1', '杜蕾斯2', '杜蕾斯3', '杜蕾斯4'],
+    list: [{
+      name:'杜蕾斯1'
+    },{
+      name:'杜蕾斯2'
+    },{
+      name:'杜蕾斯3'
+    },{
+      name:'杜蕾斯4'
+    }],
     act: 0
   },
 
@@ -17,8 +25,12 @@ Page({
 
   },
   bindPickerChange: function (e) {
+    var index = e.currentTarget.dataset.index;
+    var act = e.detail.value;
+    this.data.list[index].name=this.data.array[act]
     this.setData({
-      act: e.detail.value
+      act,
+      list:this.data.list
     })
   },
   /**
